@@ -93,8 +93,8 @@ class NewsCreate(PermissionRequiredMixin, CreateView):
         msg.attach_alternative(html_content, "text/html")
         msg.send()
 
-#        new_post.delay(self.object.id)
-        hello.delay()
+        new_post.delay(self.object.id)
+#        hello.delay()
 
         return result
 
